@@ -1,0 +1,55 @@
+:root {
+    --app-light: #aee6ee;
+    --app-dark: #29b3ca;
+    --app-progress: #6fc3d1;
+    --app-gray: #6f6f6f;
+    --app-gray-light: #6f6f6f50;
+}
+.gameModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(0, 0, 0,0.3) 0px 6px 6px 12px;
+    background-color: var(--app-gray-light);
+    border-radius: 20px;
+    z-index: 999;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+.gameModal.show{
+    display: flex;
+}
+
+.gameModalBody {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.modalText {
+    color: #28A745;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+.repeatGameBtn {
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgb(18, 201, 146);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+}

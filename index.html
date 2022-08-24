@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="app.js" defer></script>
+    <title>Rock-Paper-Scissors Game</title>
+</head>
+
+<body>
+    <div class="gameModal">
+        <div class="gameModalBody">
+            <img src="img/congrats.png" alt="" class="modalCongrats">
+            <p class="modalText">Player Wins!</p>
+            <button class="repeatGameBtn" onclick="repeatGame()">Play Again</button>
+        </div>
+    </div>
+    <section class="game">
+        <div class="score">
+            <div class="playerScore">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computerScore">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="images">
+                <img src="img/scissors.png" alt="">
+                <img src="img/paper.png" alt="">
+                <img src="img/rock.png" alt="">
+            </div>
+            <!-- <h1>Rock Paper and Scissors</h1> -->
+            <button id="playBtn">Let's Play</button>
+        </div>
+        <div class="match fadeOut">
+            <h2 class="winner">Choose an options</h2>
+            <div class="hands">
+                <img class="playerHand" src="img/rock.png" alt="" />
+                <img class="computerHand" src="img/paper.png" alt="" />
+            </div>
+            <div class="options">
+                <button class="rock">rock</button>
+                <button class="paper">paper</button>
+                <button class="scissors">scissors</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
