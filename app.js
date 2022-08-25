@@ -66,13 +66,13 @@ const game = () => {
             // Check for rock
             if (playerChoice === 'rock') {
                 if (computerChoice === 'scissors') {
-                    winner.textContent = 'Player Wins'
+                    winner.textContent = 'You Wins'
                     playerWins();
                     playerScore++;
                     updateScore();
                     return;
                 } else {
-                    winner.textContent = 'Computer Wins';
+                    winner.textContent = 'You Lost 😔';
                     computerWins();
                     computerScore++;
                     updateScore();
@@ -82,13 +82,13 @@ const game = () => {
             //Check for Paper
             if (playerChoice === 'paper') {
                 if (computerChoice === 'scissors') {
-                    winner.textContent = 'Computer Wins'
+                    winner.textContent = 'You Lost 😔'
                     computerWins();
                     computerScore++;
                     updateScore();
                     return;
                 } else {
-                    winner.textContent = 'Player Wins';
+                    winner.textContent = 'You Wins';
                     playerWins();
                     playerScore++;
                     updateScore();
@@ -98,13 +98,13 @@ const game = () => {
             //Check for Scissors
             if (playerChoice === 'scissors') {
                 if (computerChoice === 'rock') {
-                    winner.textContent = 'Computer Wins'
+                    winner.textContent = 'You Lost 😔'
                     computerWins();
                     computerScore++;
                     updateScore();
                     return;
                 } else {
-                    winner.textContent = 'Player Wins';
+                    winner.textContent = 'You Wins';
                     playerWins();
                     playerScore++;
                     updateScore();
@@ -150,11 +150,12 @@ function modal(playerScore,computerScore) {
     const game = document.querySelector('.game');
     if (playerScore == 3) {
         game.classList.add('hide');
-        modalText.textContent = "Player Wins!"
+        modalText.textContent = "You Wins!"
         gameModal.classList.add('show');
     } else if (computerScore == 3) {
         game.classList.add('hide');
         modalText.textContent = "Computer Wins!"
+        document.querySelector('.modalCongrats').src = "img/madface.png"
         gameModal.classList.add('show');
     }
 }
